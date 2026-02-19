@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Read CSV file into a DataFrame
-csv_file_path4 = r"%%%%"  # %%%% - Replace with the file path of the OD-readings log file including .csv
+csv_file_path4 = r"%%%%"  # %%%% - Replace with the file path of the OD-readings log including all Pioreactors of given experiment file including .csv
 df = pd.read_csv(csv_file_path4)
 
 # Convert "timestamp_localtime" to datetime and calculate time in hours
@@ -37,3 +37,4 @@ figure.supxlabel('Time [h]',x=mid,size=26,family="Arial")
 figure.supylabel('Cell density',size=26,family="Arial")
 figure.legend(["M9S+kan"],loc="upper center",ncol=2,bbox_to_anchor=(0.5,0)) # Personalize legend
 figure.savefig('MW_pio_004.svg',dpi=600,format="svg",bbox_inches='tight') # Include the specific file name and format desired for the output figure mark # If it is not desired to save plot
+
